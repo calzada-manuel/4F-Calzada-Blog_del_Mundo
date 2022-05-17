@@ -1,0 +1,15 @@
+.cuerpo_blog{
+    background-color: black; color: #FFFFFF;}
+
+.article{
+    background: rgb(44, 43, 43);
+    padding: 1.5rem;
+    border-bottom: 1px solid #FFFFFF;}
+
+.resaltado{
+    color: yellow/*color de texto*/ }
+
+#titulo_blog{
+    font-size: 3rem;
+    text-align: center;
+}
