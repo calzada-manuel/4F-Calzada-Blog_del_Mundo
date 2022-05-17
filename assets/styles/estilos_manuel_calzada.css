@@ -7,9 +7,19 @@ section{
 section>header{
     grid-column:span 12;}
 main{
-    grid-column: span 8;}
+    grid-column: span 12;}
+
+@media (min-width: 1024.1px){ /*responsive main*/
+    main{
+    width:100%;
+    grid-column:span 8;
+    gap: 1rem;
+    padding: 0.6rem;}}
 aside{
-    grid-column:span 4;}
+    grid-column:span 12;}
+@media (min-width: 1024.1px) {
+        aside{
+        grid-column:span 4;}}
 section>footer{
     grid-column:span 12}
 /*GRID*/
@@ -17,7 +27,11 @@ section>footer{
 
 /*Barra de navegación*/
 nav{
-    font-size: 1.3rem;/*tamaño de letra*/}
+    font-size: 1.3rem;/*tamaño de letra*/
+    position: fixed;
+    width:100%;
+    background-color: black;
+}
 
 nav>ul{
     display: flex;/*desplegar flex*/
@@ -25,6 +39,21 @@ nav>ul{
     justify-content: space-around;/*espacio equitativo entre ellos*/
     border-bottom: 1px solid #FFFFFF;/*borde inferior*/
     padding-bottom: 0.5rem;}/*espacio entre borde <ul>*/
+
+nav>ul{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    gap: 1rem;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 1.5rem;}
+
+@media (min-width: 1100px) {/*responsive aside*/
+    nav>ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-bottom: 1px solid red;}}
 
 nav>ul>li>a:hover{
     text-decoration: underline;/*decoración del texto*/
@@ -42,7 +71,8 @@ nav>ul>li>a {
 /*Barra de navegación*/
 
 .cuerpo_blog{
-    background-color: black; color: #FFFFFF;}
+    background-color: black; color: #FFFFFF;
+    margin: 0;}
 
 .article{
     background: rgb(44, 43, 43);
@@ -51,7 +81,8 @@ nav>ul>li>a {
 
 #titulo_blog{
     font-size: 3rem;
-    text-align: center;}
+    text-align: center;
+    margin-top: 5rem;}
 
 /*Header*/
 article>header>hgroup{
@@ -82,6 +113,18 @@ aside>h2{
     text-align: center;}
 aside>div:nth-of-type(even){
     background-color: rgb(44, 43, 43);}
+aside div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    gap: 1rem;
+    padding: 0.6rem;
+    border-bottom: 1px dashed #fff;}
+@media (min-width: 1024.1px) and (max-width: 1324.1px) {
+    aside div {
+    flex-direction: column;}}
 aside>div>img{
     background-color: #FFFFFF;/*fondo*/
     padding: 0.5rem;/**/
@@ -90,16 +133,25 @@ aside>div>img{
 /*aside*/
 
 /*footer*/
-#footer_blog{
+@media (min-width: 1024.1px){
+    #footer_blog{
     margin: 2rem;
     padding:4rem 0 4rem 0;
     size: 1.3rem;
     /*felxbox*/
     display: flex;/*desplegar flex*/
     align-items: center;/*alinear al centro*/
-    justify-content: space-between;}
+    justify-content: space-between;}}
+
+#footer_blog {
+    grid-column: span 12;
+    text-align: center;
+    padding:4rem 0 4rem 0;
+    size: 1.3rem;
+}
 #footer_blog div {
     padding:1rem 0 1rem 0;}
-
+#footer_blog div:nth-child(2){
+    font-size:0.9rem }
 /*footer*/
 
