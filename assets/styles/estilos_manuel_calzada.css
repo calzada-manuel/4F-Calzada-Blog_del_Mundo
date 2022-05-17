@@ -1,3 +1,22 @@
+/*GRID*/
+section{
+    display:grid;/*grid display*/
+    grid-template-columns:repeat(12, 1fr);/*columnas*/
+    grid-auto-rows: auto;/*lineas*/
+    grid: 3rem;}/**/
+section>header{
+    grid-column:span 12;}
+main{
+    grid-column: span 8;
+}
+aside{
+    grid-column:span 4;}
+
+section>footer{
+    grid-column:span 12}
+/*GRID*/
+
+
 /*Barra de navegación*/
 nav>ul>li {
     list-style:none/*estilo de lista o quitar viñetado*/}
